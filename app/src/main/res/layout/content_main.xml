@@ -5,23 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context=".MainActivity">
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:padding="10dp"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:id="@+id/slideshow"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:layout_marginTop="45dp">
-            //slideshow
+            <!--slideshow-->
 
             <LinearLayout
                 android:id="@+id/slideshow_LL"
@@ -49,7 +49,7 @@
                     app:snap="false" />
             </LinearLayout>
 
-            //cities
+            <!--cities-->
 
             <LinearLayout
                 android:id="@+id/Cities_More_Linear_Layout"
@@ -127,18 +127,18 @@
                         android:layout_gravity="center"
                         android:src="@drawable/agra"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/city_name_1_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="1dp"
                         android:text="Agra"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -157,18 +157,18 @@
                         android:layout_gravity="center"
                         android:src="@drawable/mumbai"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/city_name_2_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="1dp"
                         android:text="Mumbai"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -184,23 +184,23 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/Delhi_image"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:src="@drawable/delhi"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/city_name_3_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="1dp"
                         android:text="Delhi"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -220,18 +220,18 @@
                         android:layout_gravity="center"
                         android:src="@drawable/banglore"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/city_name_4_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Banglore"
+                        android:layout_marginTop="1dp"
+                        android:text="Bangalore"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -240,7 +240,7 @@
             </LinearLayout>
 
 
-            //events
+            <!--events-->
 
             <LinearLayout
                 android:id="@+id/Events_More_Linear_Layout"
@@ -293,152 +293,208 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/Four_Event_LL"
+            <HorizontalScrollView
+                android:id="@+id/event_horizontal_scrollview"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="185dp"
                 android:layout_below="@id/Events_More_Linear_Layout"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="9dp"
-                android:orientation="horizontal">
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
 
                 <LinearLayout
-                    android:id="@+id/event_name1_LL"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:id="@+id/event_horizontal_cardview_LL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
 
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/event1_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/djnight"
-                        app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardview1"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp"
 
-                    <TextView
-                        android:id="@+id/event_name_1_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="DJ Night"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
+                        >
 
+
+                        <LinearLayout
+                            android:id="@+id/event_cardview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/event_cardview1_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mumbai" />
+
+                            <TextView
+                                android:id="@+id/event_cardview1_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="One"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardview2"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/event_cardview2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/event_cardview2_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mumbai" />
+
+                            <TextView
+                                android:id="@+id/event_cardview2_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Two"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardview3"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/event_cardview3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/event_cardview3_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/dandiyanights" />
+
+                            <TextView
+                                android:id="@+id/event_cardview3_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Three"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardview4"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/event_cardview4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/event_cardview4_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/delhi" />
+
+                            <TextView
+                                android:id="@+id/event_cardview4_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Four"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardview5"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/event_cardview5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/event_cardview5_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/banglore" />
+
+                            <TextView
+                                android:id="@+id/event_cardview5_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Five"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
 
                 </LinearLayout>
+            </HorizontalScrollView>
 
-                <LinearLayout
-                    android:id="@+id/event_name2_LL"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/event2_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/dandiyanights"
-                        app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:id="@+id/event_name_2_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Dandiya Nights"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_name3_LL"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-
-                    android:layout_weight="1"
-
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/event3_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/sports"
-                        app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:id="@+id/event_name_3_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Sports"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/event_name4_LL"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/event4_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/trekjpg"
-                        app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:id="@+id/event_name_4_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Trek"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            //Tourist places
+            <!--Tourist places-->
 
 
             <LinearLayout
                 android:id="@+id/Tourism_More_Linear_Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Four_Event_LL"
-                android:layout_margin="5dp"
-                android:orientation="horizontal">
+                android:layout_below="@+id/event_horizontal_scrollview"
+                android:layout_marginTop="30dp"
+
+                android:orientation="horizontal"
+                tools:ignore="NotSibling">
 
                 <LinearLayout
                     android:id="@+id/Tourism_Linear_Layout"
@@ -484,9 +540,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/Four_Tourism_LL"
+                android:id="@+id/Line1_three_Tourism_LL"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_below="@id/Tourism_More_Linear_Layout"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="9dp"
@@ -495,15 +551,15 @@
                 <LinearLayout
                     android:id="@+id/tourism_name1_LL"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/tourism1_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:src="@drawable/djnight"
                         app:civ_border_color="#424949"
@@ -517,7 +573,7 @@
                         android:text="Toursism1"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
 
 
@@ -526,14 +582,14 @@
                 <LinearLayout
                     android:id="@+id/tourism_name2_LL"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/tourism2_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:src="@drawable/dandiyanights"
                         app:civ_border_color="#424949"
@@ -547,27 +603,27 @@
                         android:text="Tourism2"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
+                        android:textSize="14dp"
                         android:textStyle="bold" />
 
 
                 </LinearLayout>
 
+
                 <LinearLayout
                     android:id="@+id/tourism_name3_LL"
                     android:layout_width="0dp"
-                    android:layout_height="70dp"
-
+                    android:layout_height="100dp"
                     android:layout_weight="1"
 
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/tourism3_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/sports"
+                        android:src="@drawable/trekjpg"
                         app:civ_border_color="#424949"
                         app:civ_border_width="2dp" />
 
@@ -576,41 +632,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Tourism3"
-                        android:textAlignment="center"
-                        android:textColor="#000"
-                        android:textSize="12dp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tourism_name4_LL"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/tourism4_image"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/trekjpg"
-                        app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
-
-                    <TextView
-                        android:id="@+id/tourism_name_4_TV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="Tourism4"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="12dp"
+                        android:textSize="15dp"
                         android:textStyle="bold" />
 
 
@@ -620,15 +645,120 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/Line2_three_Tourism_LL"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/Line1_three_Tourism_LL"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal">
 
-            //Apps
+                <LinearLayout
+                    android:id="@+id/tourism_name4_LL"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tourism4_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/djnight"
+                        app:civ_border_color="#424949"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/tourism_name_4_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Toursism1"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tourism_name5_LL"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tourism5_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dandiyanights"
+                        app:civ_border_color="#424949"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/tourism_name_5_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Tourism2"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tourism_name6_LL"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/tourism6_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/trekjpg"
+                        app:civ_border_color="#424949"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/tourism_name_6_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Tourism4"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!--Apps-->
 
             <LinearLayout
                 android:id="@+id/Apps_More_Linear_Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Four_Tourism_LL"
-                android:layout_margin="5dp"
+                android:layout_below="@id/Line2_three_Tourism_LL"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -644,7 +774,7 @@
                         android:layout_marginStart="4dp"
                         android:text="Apps in your City"
                         android:textColor="#424949"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <View
@@ -699,7 +829,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/djnight"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/app_name_1_TV"
@@ -729,7 +859,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/dandiyanights"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/app_name_2_TV"
@@ -761,7 +891,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/sports"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/app_name_3_TV"
@@ -792,7 +922,7 @@
                         android:layout_gravity="center"
                         android:src="@drawable/trekjpg"
                         app:civ_border_color="#424949"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="1dp" />
 
                     <TextView
                         android:id="@+id/app_name_4_TV"
@@ -811,11 +941,270 @@
 
             </LinearLayout>
 
-            //News Horizontal Listview
+            <!--News Horizontal Listview-->
 
-            //Guide
 
-            //
+            <!--@+id/news_horizontal_scrollview"
+    "@+id/news_horizontal_cardview_LL"
+    "@+id/news_cardview1"
+    "@+id/newscardview1"
+    @+id/news_cardview1_img"
+    "@+id/news_cardview1_textview"-->
+
+            <LinearLayout
+                android:id="@+id/News_More_Linear_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Four_App_LL"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/News_Linear_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/News_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="City News"
+                        android:textColor="#424949"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_below="@id/News_TextView"
+                        android:layout_margin="8dp"
+                        android:background="#000" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/News_More_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:paddingEnd="2dp"
+                    android:text="More"
+                    android:textColor="#0000ff"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/news_horizontal_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@id/News_More_Linear_Layout"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/news_horizontal_cardview_LL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/news_cardview1"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp"
+
+                        >
+
+
+                        <LinearLayout
+                            android:id="@+id/newscardview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/news_cardview1_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mumbai" />
+
+                            <TextView
+                                android:id="@+id/news_cardview1_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="One"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/news_cardview2"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/newscardview2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/news_cardview2_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/mumbai" />
+
+                            <TextView
+                                android:id="@+id/news_cardview2_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Two"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/news_cardview3"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/newscardview3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/news_cardview3_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/dandiyanights" />
+
+                            <TextView
+                                android:id="@+id/news_cardview3_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Three"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/news_cardview4"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/newscardview4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/news_cardview4_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/delhi" />
+
+                            <TextView
+                                android:id="@+id/news_cardview4_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Four"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/news_cardview5"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        card_view:cardBackgroundColor="#fff"
+                        card_view:cardCornerRadius="5dp"
+                        card_view:cardElevation="5dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/newscardview5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/news_cardview5_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:src="@drawable/banglore" />
+
+                            <TextView
+                                android:id="@+id/news_cardview5_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Five"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/news_horizontal_scrollview"
+                android:layout_marginTop="30dp"
+                />
+
+
+            <!--Guide-->
+
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".City_list_item_more">
+    tools:context=".events_more_list_item">
 
 </android.support.constraint.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.viewpagerindicator.CirclePageIndicator;
@@ -25,7 +27,9 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-TextView City_More;
+TextView City_More,Event_More,Tourism_More,App_More,News_More;
+LinearLayout city_1,city_2,city_3,city_4,tourism_1,tourism_2,tourism_3,tourism_4,tourism_5,tourism_6;
+CardView eventcardview_1,eventcardview2,eventcardview3,eventcardview4,eventcardview5,NewsCardView1,NewsCardView2,NewsCardView3,NewsCardView4,NewsCardView5;
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -45,9 +49,202 @@ TextView City_More;
         City_More.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,City_list_item_more.class)) ;
+                startActivity(new Intent(MainActivity.this,city_more_list_item.class)) ;
             }
         }));
+
+
+        city_1=findViewById(R.id.city_name1_LL);
+        city_1.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        }));
+        city_2=findViewById(R.id.city_name2_LL);
+        city_2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        }));
+        city_3=findViewById(R.id.city_name3_LL);
+        city_3.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        }));
+        city_4=findViewById(R.id.city_name4_LL);
+        city_4.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        }));
+
+        Event_More=findViewById(R.id.Events_More_TextView);
+        Event_More.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+
+
+
+        eventcardview_1=findViewById(R.id.cardview1);
+        eventcardview_1.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+        eventcardview2=findViewById(R.id.cardview2);
+        eventcardview2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+        eventcardview3=findViewById(R.id.cardview3);
+        eventcardview3.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+        eventcardview4=findViewById(R.id.cardview4);
+        eventcardview4.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+        eventcardview5=findViewById(R.id.cardview5);
+        eventcardview5.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,events_more_list_item.class)) ;
+            }
+        }));
+
+
+        Tourism_More=findViewById(R.id.Tourism_More_TextView);
+        Tourism_More.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+
+        tourism_1=findViewById(R.id.tourism_name1_LL);
+        tourism_1.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+        tourism_2=findViewById(R.id.tourism_name2_LL);
+        tourism_2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+        tourism_3=findViewById(R.id.tourism_name3_LL);
+        tourism_3.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+        tourism_4=findViewById(R.id.tourism_name4_LL);
+        tourism_4.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+        tourism_5=findViewById(R.id.tourism_name5_LL);
+        tourism_5.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+        tourism_6=findViewById(R.id.tourism_name6_LL);
+        tourism_6.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,tourism_more_list_item.class)) ;
+            }
+        }));
+
+
+        App_More=findViewById(R.id.Apps_More_TextView);
+        App_More.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,app_more_list_item.class)) ;
+            }
+        }));
+
+
+
+        News_More=findViewById(R.id.News_More_TextView);
+      News_More.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+
+
+        NewsCardView1=findViewById(R.id.news_cardview1);
+        NewsCardView1.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+        NewsCardView2=findViewById(R.id.news_cardview2);
+        NewsCardView2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+        NewsCardView3=findViewById(R.id.news_cardview3);
+      NewsCardView3.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+        NewsCardView4=findViewById(R.id.news_cardview4);
+        NewsCardView4.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+        NewsCardView5=findViewById(R.id.news_cardview5);
+        NewsCardView5.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,news_more_list_item.class)) ;
+            }
+        }));
+
+
+
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,14 +253,7 @@ TextView City_More;
 
         init();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

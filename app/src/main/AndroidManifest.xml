@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".City_list_item_more"></activity>
+        <activity android:name=".city_more_list_item" />
+        <activity android:name=".events_more_list_item" />
+        <activity android:name=".tourism_more_list_item" />
+        <activity android:name=".app_more_list_item" />
+        <activity android:name=".news_more_list_item" />
     </application>
 
 </manifest>
